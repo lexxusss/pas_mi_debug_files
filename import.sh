@@ -18,6 +18,8 @@ function downloadGz {
 
 }
 
+
+#IMPORT OLD TEMPLATES
 #zalando
 download import-zalando.csv "http://productdata.zanox.com/exportservice/v1/rest/27899028C75167572.csv?ticket=6658B011FBCB0CDBE45FB47DA6D33AA2&productIndustryId=1&columnDelimiter=,&textQualifier=DoubleQuote&nullOutputFormat=NullValue&dateFormat=yyyy-MM-dd'T'HH:mm:ss:SSS&decimalSeparator=period&mc=&nb=&zi=&id=&pg=&na=&pp=&po=&cy=&du=&ds=&dl=&tm=&c1=&c2=&c3=&ia=&im=&il=&df=&dt=&lk=&ss=&sa=&af=&sp=&sv=&x1=&x2=&x3=&x4=&x5=&x6=&x7=&x8=&x9=&ea=&gt=&is=&td=&bp=&ba=&bt=&sh=&sn=&pc=&zs=&za=&mn=&mo=&co=&ma=&sz=&gn=&i1=&i2=&i3=&gZipCompress=null"
 
@@ -55,6 +57,9 @@ download import-deichmann.csv "http://api.tradedoubler.com/1.0/productsUnlimited
 
 #Pull&Bear / 35
 download import-pullbear.csv "http://productdata.zanox.com/exportservice/v1/rest/39071394C925252918.csv?ticket=6658B011FBCB0CDBE45FB47DA6D33AA2&productIndustryId=1&columnDelimiter=,&textQualifier=DoubleQuote&nullOutputFormat=NullValue&dateFormat=yyyy-MM-dd'T'HH:mm:ss:SSS&decimalSeparator=period&mc=&nb=&zi=&id=&pg=&na=&pp=&po=&cy=&du=&ds=&dl=&tm=&c1=&c2=&c3=&ia=&im=&il=&df=&dt=&lk=&ss=&sa=&af=&sp=&sv=&x1=&x2=&x3=&x4=&x5=&x6=&x7=&x8=&x9=&ea=&gt=&is=&td=&bp=&ba=&bt=&sh=&sn=&pc=&zs=&za=&mn=&mo=&co=&ma=&sz=&gn=&i1=&i2=&i3=&gZipCompress=null"
+
+#IMPORT NEW TEMPLATES
+#downloadGz import-new-datafeed.csv.gz "https://productdata.awin.com/datafeed/download/apikey/977be54b7b887488e3938750b8cb49e8/language/any/cid/141,205,198,206,203,199,204,201/columns/aw_deep_link,product_name,aw_product_id,merchant_product_id,merchant_image_url,description,merchant_category,search_price,merchant_name,merchant_id,category_name,category_id,aw_image_url,currency,store_price,delivery_cost,merchant_deep_link,language,last_updated,display_price,data_feed_id,brand_name,brand_id,colour,product_short_description,specifications,condition,product_model,model_number,dimensions,keywords,promotional_text,product_type,commission_group,merchant_product_category_path,merchant_product_second_category,merchant_product_third_category,rrp_price,saving,savings_percent,base_price,base_price_amount,base_price_text,product_price_old,delivery_restrictions,delivery_weight,warranty,terms_of_contract,delivery_time,in_stock,stock_quantity,valid_from,valid_to,is_for_sale,web_offer,pre_order,stock_status,size_stock_status,size_stock_amount,merchant_thumb_url,large_image,alternate_image,aw_thumb_url,alternate_image_two,alternate_image_three,alternate_image_four,reviews,average_rating,rating,number_available,custom_1,custom_2,custom_3,custom_4,custom_5,custom_6,custom_7,custom_8,custom_9,ean,isbn,upc,mpn,parent_product_id,product_GTIN,basket_link,Fashion%3Asuitable_for,Fashion%3Acategory,Fashion%3Asize,Fashion%3Amaterial,Fashion%3Apattern,Fashion%3Aswatch,GroupBuying%3Aevent_date,GroupBuying%3Aexpiry_date,GroupBuying%3Aexpiry_time,GroupBuying%3Aevent_city,GroupBuying%3Aevent_address,GroupBuying%3Anumber_sessions,GroupBuying%3Aterms,GroupBuying%3Anumber_sold,GroupBuying%3Amin_required,GroupBuying%3Asupplier,GroupBuying%3Agroup_latitude,GroupBuying%3Agroup_longitude,GroupBuying%3Adeal_start,GroupBuying%3Adeal_end/format/csv/delimiter/%2C/compression/gzip/adultcontent/1/"
 
 TXT='Subject: Pobranie plikow z Zanox\nFrom: System PasujeMi.pl <no-reply@pasujemi.com>\n\n'
 TXT+='Pobrano pliki z Zanox (rozmiar, data, nazwa):\n'

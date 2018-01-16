@@ -18,7 +18,7 @@ $trimChars = " \t\n\r\0\x0B\"\\";
 function zanox($file, $source, $newTemplate = false) {
     global $colsZanox, $colsZanoxNew, $colsZanoxOldNew, $categoriesToImport, $categoriesNotToImport, $trimChars;
 
-    echo "import $file ... \r\n";
+    echo "db-import $file ... \r\n";
 
     $count = 0;
     $countErr = 0;
@@ -101,24 +101,29 @@ function zanox($file, $source, $newTemplate = false) {
             }
             $row++;
         }
-        echo $count . "\r\n";
+
+        echo "... imported $count rows\r\n";
 
         fclose($handle);
     }
     mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox', 'Zaimportowano '.$count.' produktow z '.$source.' do bazy tymczasowej, '.$countErr.' produktow blednych.', 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
 }
 
-// skrypt odpalany po import.sh (pobranie plikow CSV z Zanox)
+/*-- import files to db --*/
+// import old templates
+zanox("/home/lrzepecki/php/csv/import-answear.csv", "Answear");
+zanox("/home/lrzepecki/php/csv/import-asos.csv", "Asos");
+zanox("/home/lrzepecki/php/csv/import-zalando.csv", "Zalando");
+zanox("/home/lrzepecki/php/csv/import-stylepit.csv", "Stylepit");
+zanox("/home/lrzepecki/php/csv/import-badura.csv", "Badura");
+zanox("/home/lrzepecki/php/csv/import-mivo.csv", "Mivo");
+zanox("/home/lrzepecki/php/csv/import-primamoda.csv", "Primamoda");
+zanox("/home/lrzepecki/php/csv/import-stylebop.csv", "STYLEBOP");
+zanox("/home/lrzepecki/php/csv/import-pullbear.csv", 'Pull&Bear');
 
-zanox("/home/lrzepecki/php/import-answear.csv", "Answear");
-zanox("/home/lrzepecki/php/import-asos.csv", "Asos");
-zanox("/home/lrzepecki/php/import-zalando.csv", "Zalando");
-zanox("/home/lrzepecki/php/import-stylepit.csv", "Stylepit");
-zanox("/home/lrzepecki/php/import-badura.csv", "Badura");
-zanox("/home/lrzepecki/php/import-mivo.csv", "Mivo");
-zanox("/home/lrzepecki/php/import-primamoda.csv", "Primamoda");
-zanox("/home/lrzepecki/php/import-stylebop.csv", "STYLEBOP");
-zanox("/home/lrzepecki/php/import-pullbear.csv", 'Pull&Bear');
+// import new templates
+//zanox("/home/lrzepecki/php/csv/import-new-datafeed.csv", 'NewDataFeed', true);
+/*-- /import files to db --*/
 
 //include '/home/lrzepecki/php/import-tradedoubler.php';
 
