@@ -1,7 +1,7 @@
 <?php
 // http://www.meekro.com/quickstart.php
-require_once '/home/lrzepecki/php/meekrodb.2.3.class.php';
-require_once '/home/lrzepecki/php/db.conf';
+require_once '/home/lrzepecki/php/config/meekrodb.2.3.class.php';
+require_once '/home/lrzepecki/php/config/db.conf';
 
 function insist($file, $source) {
     $row = 0;
@@ -31,6 +31,6 @@ function insist($file, $source) {
     mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Insist', 'Zaimportowano '.$count.' produktow z '.$source.' do bazy tymczasowej.', 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
 }
 
-insist("/home/lrzepecki/php/import-insist.csv", "Insist");
+insist("/home/lrzepecki/php/csv/import-insist.csv", "Insist");
 
 ?>

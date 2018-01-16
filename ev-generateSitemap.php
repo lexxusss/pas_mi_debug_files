@@ -1,9 +1,9 @@
 <?php
 // https://www.meekro.com/quickstart.php
-require_once 'meekrodb.2.3.class.php';
+require_once 'config/meekrodb.2.3.class.php';
 // https://pear.php.net/manual/en/package.http.http-request2.php
 require_once 'HTTP/Request2.php';
-require_once 'ev-db.conf';
+require_once 'config/ev-db.conf';
 
 $path = '/var/www/html/eventi/web/sitemap';
 

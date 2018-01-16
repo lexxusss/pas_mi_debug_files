@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function download {
-	/usr/bin/wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/$1 "$2"
+	wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/csv/$1 "$2"
 	if [ $? -ne 0 ] ; then
 		echo "Probuje ponownie..." ;
-		/usr/bin/wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/$1 "$2"
+		wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/csv/$1 "$2"
 	fi
 }
 

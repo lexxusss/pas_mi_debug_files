@@ -1,7 +1,7 @@
 <?php
 // http://www.meekro.com/quickstart.php
-require_once '/home/lrzepecki/php/meekrodb.2.3.class.php';
-require_once '/home/lrzepecki/php/db.conf';
+require_once '/home/lrzepecki/php/config/meekrodb.2.3.class.php';
+require_once '/home/lrzepecki/php/config/db.conf';
 
 function zanox($file, $source) {
     $row = 1;
@@ -89,16 +89,16 @@ function zanox($file, $source) {
 
 // skrypt odpalany po import.sh (pobranie plikow CSV z Zanox)
 
-//zanox("/home/lrzepecki/php/import-answear.csv", "Answear");
-//zanox("/home/lrzepecki/php/import-asos.csv", "Asos");
-zanox("/home/lrzepecki/php/import-zalando.csv", "Zalando");
-//zanox("/home/lrzepecki/php/import-stylepit.csv", "Stylepit");
-//zanox("/home/lrzepecki/php/import-badura.csv", "Badura");
-//zanox("/home/lrzepecki/php/import-mivo.csv", "Mivo");
-//zanox("/home/lrzepecki/php/import-primamoda.csv", "Primamoda");
-//zanox("/home/lrzepecki/php/import-stylebop.csv", "STYLEBOP");
+//zanox("/home/lrzepecki/php/csv/import-answear.csv", "Answear");
+//zanox("/home/lrzepecki/php/csv/import-asos.csv", "Asos");
+zanox("/home/lrzepecki/php/csv/import-zalando.csv", "Zalando");
+//zanox("/home/lrzepecki/php/csv/import-stylepit.csv", "Stylepit");
+//zanox("/home/lrzepecki/php/csv/import-badura.csv", "Badura");
+//zanox("/home/lrzepecki/php/csv/import-mivo.csv", "Mivo");
+//zanox("/home/lrzepecki/php/csv/import-primamoda.csv", "Primamoda");
+//zanox("/home/lrzepecki/php/csv/import-stylebop.csv", "STYLEBOP");
 
-//zanox("/home/lrzepecki/php/import-pullbear.csv", 'Pull&Bear');
+//zanox("/home/lrzepecki/php/csv/import-pullbear.csv", 'Pull&Bear');
 
 //include '/home/lrzepecki/php/import-tradedoubler.php';
 

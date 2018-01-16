@@ -3,8 +3,8 @@
 require_once '/usr/share/php/php-simplepie/autoloader.php';
 
 //MeekroDB (http://www.meekro.com/quickstart.php)
-require_once '/home/lrzepecki/php/meekrodb.2.3.class.php';
-require_once '/home/lrzepecki/php/db.conf';
+require_once '/home/lrzepecki/php/config/meekrodb.2.3.class.php';
+require_once '/home/lrzepecki/php/config/db.conf';
 
 #DB::$dbName = 'pasujemi20151027'; //pasujemi20151027 //pasujemi_dev_sfth
 

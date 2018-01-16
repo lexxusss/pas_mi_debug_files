@@ -1,9 +1,9 @@
 <?php
 // http://www.meekro.com/quickstart.php
-require_once 'meekrodb.2.3.class.php';
+require_once 'config/meekrodb.2.3.class.php';
 // http://pear.php.net/manual/en/package.http.http-request2.php
 require_once 'HTTP/Request2.php';
-require_once 'db.conf';
+require_once 'config/db.conf';
 
 $msg = "";
 $results = DB::query("SELECT source, MerchantProductCategoryPath, count(*) count FROM x_products where category_id is null group by MerchantProductCategoryPath having count > 10 order by count desc, MerchantProductCategoryPath;");

@@ -1,7 +1,7 @@
 <?php
 // http://www.meekro.com/quickstart.php
-require_once '/home/lrzepecki/php/meekrodb.2.3.class.php';
-require_once '/home/lrzepecki/php/db.conf';
+require_once '/home/lrzepecki/php/config/meekrodb.2.3.class.php';
+require_once '/home/lrzepecki/php/config/db.conf';
 
 $msg = '';
 

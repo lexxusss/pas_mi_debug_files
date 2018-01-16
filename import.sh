@@ -1,11 +1,21 @@
 #!/bin/bash
 
 function download {
-	/usr/bin/wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/$1 "$2"
+    echo "Import $1";
+
+	/usr/bin/wget -a /home/lrzepecki/php/csv/import.log -O /home/lrzepecki/php/csv/$1 "$2"
 	if [ $? -ne 0 ] ; then
 		echo "Probuje ponownie..." ;
-		/usr/bin/wget -a /home/lrzepecki/php/import.log -O /home/lrzepecki/php/$1 "$2"
+		/usr/bin/wget -a /home/lrzepecki/php/csv/import.log -O /home/lrzepecki/php/csv/$1 "$2"
 	fi
+}
+
+function downloadGz {
+    download $1 $2
+
+    echo "Unpack $1";
+    /usr/bin/gunzip -f /home/lrzepecki/php/csv/$1
+
 }
 
 #zalando
