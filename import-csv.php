@@ -36,7 +36,7 @@ function zanox($file, $source, $newTemplate = false) {
                 if ($newTemplate) {
                     if (count(array_diff($colsArr, $colsZanoxNew))) {
                         echo "Brak zgodnosci kolumn z $source:\r\n";
-    					mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox - problem!', 'Bledny import - brak zgodnosci kolumn podczas importu z '.$source, 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
+//    					mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox - problem!', 'Bledny import - brak zgodnosci kolumn podczas importu z '.$source, 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
                         break;
                     }
                 } else {
@@ -49,7 +49,7 @@ function zanox($file, $source, $newTemplate = false) {
                     }
                     if (count(array_diff($colsArr, $colsZanox))) {
                         echo "Brak zgodnosci kolumn z $source\r\n";
-    					mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox - problem!', 'Bledny import - brak zgodnosci kolumn podczas importu z '.$source, 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
+//    					mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox - problem!', 'Bledny import - brak zgodnosci kolumn podczas importu z '.$source, 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
                         break;
                     }
 
@@ -106,26 +106,30 @@ function zanox($file, $source, $newTemplate = false) {
 
         fclose($handle);
     }
-    mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox', 'Zaimportowano '.$count.' produktow z '.$source.' do bazy tymczasowej, '.$countErr.' produktow blednych.', 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
+//    mail('lukasz@pasujemi.com, kasia@pasujemi.com', 'Import z Zanox', 'Zaimportowano '.$count.' produktow z '.$source.' do bazy tymczasowej, '.$countErr.' produktow blednych.', 'From: System PasujeMi.pl <no-reply@pasujemi.com>');
 }
+
+
+#$dirHome = '/home/lrzepecki/php';
+$dirHome = '/Applications/MAMP/htdocs/AUTENTI/PasujeMi_debug_files';
 
 /*-- import files to db --*/
 // import old templates
-zanox("/home/lrzepecki/php/csv/import-answear.csv", "Answear");
-zanox("/home/lrzepecki/php/csv/import-asos.csv", "Asos");
-zanox("/home/lrzepecki/php/csv/import-zalando.csv", "Zalando");
-zanox("/home/lrzepecki/php/csv/import-stylepit.csv", "Stylepit");
-zanox("/home/lrzepecki/php/csv/import-badura.csv", "Badura");
-zanox("/home/lrzepecki/php/csv/import-mivo.csv", "Mivo");
-zanox("/home/lrzepecki/php/csv/import-primamoda.csv", "Primamoda");
-zanox("/home/lrzepecki/php/csv/import-stylebop.csv", "STYLEBOP");
-zanox("/home/lrzepecki/php/csv/import-pullbear.csv", 'Pull&Bear');
+//zanox("$dirHome/csv/import-answear.csv", "Answear");
+//zanox("$dirHome/csv/import-asos.csv", "Asos");
+//zanox("$dirHome/csv/import-zalando.csv", "Zalando");
+//zanox("$dirHome/csv/import-stylepit.csv", "Stylepit");
+//zanox("$dirHome/csv/import-badura.csv", "Badura");
+//zanox("$dirHome/csv/import-mivo.csv", "Mivo");
+//zanox("$dirHome/csv/import-primamoda.csv", "Primamoda");
+//zanox("$dirHome/csv/import-stylebop.csv", "STYLEBOP");
+//zanox("$dirHome/csv/import-pullbear.csv", 'Pull&Bear');
 
 // import new templates
-//zanox("/home/lrzepecki/php/csv/import-new-datafeed.csv", 'NewDataFeed', true);
+zanox("$dirHome/csv/new-datafeed_awin.csv", 'NewDataFeed', true);
 /*-- /import files to db --*/
 
-//include '/home/lrzepecki/php/import-tradedoubler.php';
+//include '$dirHome/import-tradedoubler.php';
 
 // nastepnie import-db.php
 
